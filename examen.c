@@ -39,6 +39,53 @@ typedef struct emprunts_des_ouvrages {
 
 
 void Ajouter_un_étudiants(etudient list[]){
+    void Ajouter_un_etudiant(e list[]){
+    char f,m;
+    int i;
+    do{
+        system("cls");
+    int flag=0;
+    printf("\n\n\t\t\t\t Ajout d'un etudiant\n\t\t\t\t~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\n\tLe matricule d'etudiant  ");
+    scanf("%d", &e[size].matricule);
+    printf("\t~~~~~~~~~~~~~~~~");
+        for(i=0; i=size-1; i++){
+            if(e[size].matricule==e[i].matricule){
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0){
+            printf("\n\n\t preciser le type d'abonnement d'etudiant (p:pour le type premium || c:pour le type classic) ");
+            scanf("%s", &e[size].abonnement);
+            printf("\n\n\t entrer le nombre des penalites");
+            scanf("%d", &e[size].penalite);
+            ++size;
+                do{
+                    printf("\n\n voulez vous l'enregistrer : (y/n) ");
+                    scanf("%s", &m);
+                    if(m=='y'||m=='Y'){
+                            printf("voulez vous un autre etudiant");
+                            scanf("%s", &f);
+
+
+                    }
+                    else{
+                        printf("\n s'il vous plait entre y ou Y pour enregistrer l'information");
+
+                    }
+                    while(m=='n'||m=='N');
+                }
+                 if(flag!=0){
+                    printf("\n l'etudiant existe deja ");
+                    getch();
+                }
+            }while(f=='y'||m=='Y');
+
+
+
+            }
+        }
     
 }
 
